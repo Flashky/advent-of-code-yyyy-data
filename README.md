@@ -30,7 +30,7 @@ This new repository is meant to be used as a [submodule](https://github.blog/201
 
 ---
 
-Data repository for [advent-of-code-{year}]() solutions repository.
+Data repository for [advent-of-code-{year}](https://github.com/Flashky/advent-of-code-{year}) solutions repository.
 
 ## About
 
