@@ -24,7 +24,7 @@ This new repository is meant to be used as a [submodule](https://github.blog/201
 1. Create the solutions repository using [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
 2. Clone the created solutions repository.
 3. Open ``src/test/resources`` folder.
-4. Execute: ``git submodule add <URL to data repo> data``
+4. Execute: ``git submodule add https://github.com/Flashky/advent-of-code-{year}-data.git inputs``
 
 ## About
 
