@@ -16,6 +16,7 @@
     1. ``advent-of-code``
     2. ``advent-of-code-data``
     3. ``advent-of-code-yyyy-data``
+3. Modify ``README.md``: replace all {year} occurrences with year in "yyyy" format.
 
 ## Solutions Repository Setup
 
@@ -25,6 +26,11 @@ This new repository is meant to be used as a [submodule](https://github.blog/201
 2. Clone the created solutions repository.
 3. Open ``src/test/resources`` folder.
 4. Execute: ``git submodule add https://github.com/Flashky/advent-of-code-{year}-data.git inputs``
+
+
+---
+
+Data repository for [advent-of-code-{year}]() solutions repository.
 
 ## About
 
