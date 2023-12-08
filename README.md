@@ -5,9 +5,9 @@
 1. Open the main page of [this repository](https://github.com/Flashky/advent-of-code-yyyy-data).
 2. Click on **Use this template**.
 3. Select **Create a new repository**:
-   1. Make sure to set as **private**.
-   2. Give a name to the new repository. Example: ``advent-of-code-2022-data``.
-   3. Add a description to the new repository. Example: ``Advent of Code 2022 - Inputs``.
+   1. Give a name to the new repository. Example: ``advent-of-code-2022-data``.
+   2. Add a description to the new repository. Example: ``Advent of Code 2022 - Inputs``.
+   3. Make sure to set as **private**.
 
 ## Repository Setup
 
