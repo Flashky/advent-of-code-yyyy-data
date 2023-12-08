@@ -22,11 +22,15 @@
 
 This new repository is meant to be used as a [submodule](https://github.blog/2016-02-01-working-with-submodules/) for the main solutions repository:
 
-1. Create the solutions repository using [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
-2. Clone the created solutions repository.
-3. Open ``src/test/resources`` folder.
-4. Execute: ``git submodule add https://github.com/Flashky/advent-of-code-{year}-data.git inputs``
+1. Open [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
+2. Follow its instructions.
 
+## Almost done...
+
+1. Remove these instructions from ``README.md``.
+1. Push the changes and...
+
+**Enjoy your new Advent of Code edition!**
 
 ---
 
