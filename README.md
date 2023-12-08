@@ -16,7 +16,7 @@
     1. ``advent-of-code``
     2. ``advent-of-code-data``
     3. ``advent-of-code-yyyy-data``
-3. Modify ``README.md``: replace all {year} occurrences with year in "yyyy" format.
+3. Modify ``README.md``: replace all ``{year}`` occurrences with year in ``yyyy`` format.
 
 ## Solutions Repository Setup
 
