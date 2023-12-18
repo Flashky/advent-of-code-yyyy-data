@@ -46,7 +46,7 @@ jobs:
       run: |
         token="${{ secrets.PAT_TOKEN }}"    
         url=https://api.github.com/repos/${{ github.repository }}
-        description='{"description": "Advent of Code ${{ github.event.inputs.aoc_year }}"}'
+        description='{"description": "Advent of Code ${{ github.event.inputs.aoc_year }} Data"}'
         curl -X PATCH -H "Authorization: Bearer $token" -H "Accept: application/vnd.github.v3+json" -d "$description" $url
     - name: Update Repository Topics
       run: |
