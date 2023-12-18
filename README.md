@@ -6,17 +6,35 @@
 2. Click on **Use this template**.
 3. Select **Create a new repository**:
    1. Give a name to the new repository. Example: ``advent-of-code-2022-data``.
-   2. Add a description to the new repository. Example: ``Advent of Code 2022 - Inputs``.
    3. Make sure to set as **private**.
 
-## Repository Setup
+### Personal Access Token Setup
 
-1. Open the created repository.
-2. Click on settings next to **About** and add the following tags (using the corresponding year):
-    1. ``advent-of-code``
-    2. ``advent-of-code-data``
-    3. ``advent-of-code-yyyy-data``
-3. Modify ``README.md``: replace all ``{year}`` occurrences with year in ``yyyy`` format.
+In order to the GitHub Actions to be able to perform certain actions, a **Personal Access Token** is needed:
+1. Open **Account / Settings / Developer Settings**.
+2. Click on **Generate New Token**.
+3. Select ``repo`` checkbox.
+4. Copy the token.
+5. Open the created repository.
+6. Open **Settings / Secrets and variables / Actions** and click on **New repository secret**:
+   1. **Name:** ``PAT_TOKEN``
+   2. **Secret:** The previously copied token.
+  
+### Update repository information
+
+1. Go to **Settings / Actions / General**.
+2. Under **Workflow permissions**:
+   1. Enable **Read and write permissions**.
+   2. Enable **Allow GitHub Actions to create and approve pull requests**.
+4. Go to **Actions** and open the **Update year** workflow:
+   1. Click on **Run workflow**.
+   2. Type the year in ``yyyy`` format and click on **Run workflow**.
+
+After the workflow has ended a Pull Request will be created:
+1. Open the [pull request](https://github.com/Flashky/advent-of-code-{year}/pull/1).
+2. Verify everything is right and then **merge** it.
+   
+After the PR is merged the repository will have its description and topics updated. Also, all ``README.md`` and ``pom.xml`` will be updated with current year value. The PR can be declined and workflow can be executed again if there was any problem that needed a fix.
 
 ## Solutions Repository Setup
 
