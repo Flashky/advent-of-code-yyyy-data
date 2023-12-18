@@ -1,4 +1,4 @@
-# Advent of Code {year} Inputs
+# Advent of Code {year} Data
 
 ## How to create a repository from this template repository 
 
