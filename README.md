@@ -1,4 +1,4 @@
-# Advent of Code {year} - Inputs
+# Advent of Code {year} Inputs
 
 ## How to create a repository from this template repository 
 
@@ -35,6 +35,22 @@ This new repository is meant to be used as a [submodule](https://github.blog/201
 ---
 
 Data repository for [advent-of-code-{year}](https://github.com/Flashky/advent-of-code-{year}) solutions repository.
+
+## Update local repository
+
+Use the following command to update the local repo if there are any remote changes:
+
+```bash
+git submodule update --recursive --remote
+```
+
+## Re-attach local repository
+
+If the local repo becomes detached, execute:
+
+```bash
+git checkout master
+```
 
 ## About
 
