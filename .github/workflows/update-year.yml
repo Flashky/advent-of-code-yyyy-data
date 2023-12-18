@@ -12,7 +12,7 @@ jobs:
     steps: 
       - name: Check Repository
         run: |
-          if [ "${{ github.repository }}" == "Flashky/advent-of-code-yyyy" ]; then
+          if [ "${{ github.repository }}" == "Flashky/advent-of-code-yyyy-data" ]; then
             echo -e "\e[91mError: This workflow cannot be run from the template repository.\e[0m"
             exit 1
           fi
