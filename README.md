@@ -11,12 +11,28 @@
 ### Personal Access Token Setup
 
 In order to the GitHub Actions to be able to perform certain actions, a **Personal Access Token** is needed:
-1. Open **Account / Settings / Developer Settings**.
-2. Click on **Generate New Token**.
-3. Select ``repo`` checkbox.
-4. Copy the token.
-5. Open the created repository.
-6. Open **Settings / Secrets and variables / Actions** and click on **New repository secret**:
+
+Open **[Account / Settings / Developer Settings / Personal access tokens (classic)](https://github.com/settings/tokens)** and verify if there is any ``PAT_TOKEN`` created.
+
+#### Creating a new token
+
+If there is no ``PAT_TOKEN`` created:
+
+1. Click on **Generate New Token**.
+2. Select ``repo`` checkbox.
+3. Copy the token.
+
+#### Refreshing an existing token
+
+If there is an existing ``PAT_TOKEN``:
+
+1. Click on it.
+2. If the expiration date is due soon, click on **regenerate the token**
+
+#### Adding the token to the repo
+
+1. Open the created repository.
+2. Open **Settings / Secrets and variables / Actions** and click on **New repository secret**:
    1. **Name:** ``PAT_TOKEN``
    2. **Secret:** The previously copied token.
   
@@ -26,7 +42,7 @@ In order to the GitHub Actions to be able to perform certain actions, a **Person
 2. Under **Workflow permissions**:
    1. Enable **Read and write permissions**.
    2. Enable **Allow GitHub Actions to create and approve pull requests**.
-4. Go to **Actions** and open the **Update year** workflow:
+3. Go to **Actions** and open the **Update year** workflow:
    1. Click on **Run workflow**.
    2. Type the year in ``yyyy`` format and click on **Run workflow**.
 
