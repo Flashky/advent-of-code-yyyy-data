@@ -43,14 +43,14 @@ This step updates the year in the repository name, description, and files.
 
 > After merging, the repository will be correctly configured for the current year.
 
-## 🔗 4. Solutions Repository Setup
+### 🔗 4. Solutions Repository Setup
 
 This repository is designed to be used as a **submodule** for your main solutions repository:
 
 1.  Open the [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
 2.  Follow **its instructions** in the "Data Repository Setup" section to link this private repository as a submodule.
 
-## ✅ 5. Final Steps
+### ✅ 5. Final Steps
 
 1. Remove all these setup instructions from the README.md.
 2. Commit and push the changes.
