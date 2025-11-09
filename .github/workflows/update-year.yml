@@ -65,6 +65,15 @@ jobs:
         topics='{"names": ["advent-of-code", "advent-of-code-${{ github.event.inputs.aoc_year }}"]}'
         curl -X PUT -H "Authorization: Bearer $token" -H "Accept: application/vnd.github.mercy-preview+json" -d "$topics" $url
 
+    # Clean up folders and README if AoC event is 2025 or newer.
+    - name: Clean Up (2025+)
+      if: ${{ github.event.inputs.aoc_year >= 2025 }}
+      run: |
+        echo "Year $AOC_YEAR is 2025 or greater. Performing cleanup..."
+
+        echo "Removing day_13-day_25 input folders."
+        rm -rf day_{13..25}
+        
     # Update README.md
     - name: Update README.md
       run: |
