@@ -1,68 +1,59 @@
-# Advent of Code {year} Data
+# 💾 Advent of Code {year} Data
 
-## How to create a repository from this template repository 
+## ⚙️ Setup Guide
 
-1. Open the main page of [this repository](https://github.com/Flashky/advent-of-code-yyyy-data).
-2. Click on **Use this template**.
-3. Select **Create a new repository**:
-   1. Give a name to the new repository. Example: ``advent-of-code-2022-data``.
-   3. Make sure to set as **private**.
+This guide details the steps to quickly set up your private data repository for the current Advent of Code year.
 
-### Personal Access Token Setup
+---
 
-In order to the GitHub Actions to be able to perform certain actions, a **Personal Access Token** is needed:
+### 🚀 1. New Repository Creation
 
-Open **[Account / Settings / Developer Settings / Personal access tokens (classic)](https://github.com/settings/tokens)** and verify if there is any ``PAT_TOKEN`` created.
+1.  Open the main page of [this template repository](https://github.com/Flashky/advent-of-code-yyyy-data).
+2.  Click **Use this template** and then **Create a new repository**.
+3.  Set the repository name (e.g., `advent-of-code-202X-data`).
+4.  **Crucially:** Ensure you set the repository visibility to **private**.
 
-#### Creating a new token
+### 🔑 2. Token and Secret Configuration
 
-If there is no ``PAT_TOKEN`` created:
+A Personal Access Token (`PAT_TOKEN`) with `repo` scope is required for GitHub Actions to update the repository information automatically.
 
-1. Click on **Generate New Token**.
-2. Select ``repo`` checkbox.
-3. Copy the token.
+1.  **Verify/Create the PAT:**
+    * Go to **[Personal access tokens (classic)](https://github.com/settings/tokens)**.
+    * If you don't have a token named `PAT_TOKEN` (or similar), click **Generate New Token**, select the `repo` scope, and **copy the generated token**.
+    * If an existing `PAT_TOKEN` is close to expiring, click on it, select **regenerate the token**, and **copy the new value**.
+2.  **Add the PAT to the new repository:**
+    * Go to **Settings / Secrets and variables / Actions**.
+    * Create a new repository secret: **Name:** `PAT_TOKEN`, **Secret:** *\[Your Token]*
 
-#### Refreshing an existing token
+### 📅 3. Year Update and Permissions
 
-If there is an existing ``PAT_TOKEN``:
+This step updates the year in the repository name, description, and files.
 
-1. Click on it.
-2. If the expiration date is due soon, click on **regenerate the token**
+1.  **Configure Workflow Permissions:**
+    * Go to **Settings / Actions / General**.
+    * Under **Workflow permissions**, enable:
+        * **Read and write permissions**.
+        * **Allow GitHub Actions to create and approve pull requests**.
+2.  **Run "Update year" Workflow:**
+    * Go to the **Actions** tab and open the **Update year** workflow.
+    * Click **Run workflow**, type the **year** in `yyyy` format (e.g., `2025`), and **Run workflow**.
+3.  **Merge the Pull Request:**
+    * Once the workflow finishes, a Pull Request will be created.
+    * **Open it**, verify the year changes are correct, and **merge** it.
 
-#### Adding the token to the repo
+> After merging, the repository will be correctly configured for the current year.
 
-1. Open the created repository.
-2. Open **Settings / Secrets and variables / Actions** and click on **New repository secret**:
-   1. **Name:** ``PAT_TOKEN``
-   2. **Secret:** The previously copied token.
-  
-### Update repository information
+### 🔗 4. Solutions Repository Setup
 
-1. Go to **Settings / Actions / General**.
-2. Under **Workflow permissions**:
-   1. Enable **Read and write permissions**.
-   2. Enable **Allow GitHub Actions to create and approve pull requests**.
-3. Go to **Actions** and open the **Update year** workflow:
-   1. Click on **Run workflow**.
-   2. Type the year in ``yyyy`` format and click on **Run workflow**.
+This repository is designed to be used as a **submodule** for your main solutions repository:
 
-After the workflow has ended a Pull Request will be created:
-1. Open the [pull request](https://github.com/Flashky/advent-of-code-{year}/pull/1).
-2. Verify everything is right and then **merge** it.
-   
-After the PR is merged the repository will have its description and topics updated. Also, all ``README.md`` and ``pom.xml`` will be updated with current year value. The PR can be declined and workflow can be executed again if there was any problem that needed a fix.
+1.  Open the [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
+2.  Follow **its instructions** in the "Data Repository Setup" section to link this private repository as a submodule.
 
-## Solutions Repository Setup
+### ✅ 5. Final Steps
 
-This new repository is meant to be used as a [submodule](https://github.blog/2016-02-01-working-with-submodules/) for the main solutions repository:
-
-1. Open [advent-of-code-yyyy](https://github.com/Flashky/advent-of-code-yyyy) template repository.
-2. Follow its instructions.
-
-## Almost done...
-
-1. Remove these instructions from ``README.md``.
-1. Push the changes and...
+1. Remove all these setup instructions from the README.md.
+2. Commit and push the changes.
 
 **Enjoy your new Advent of Code edition!**
 
