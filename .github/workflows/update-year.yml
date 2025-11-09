@@ -10,6 +10,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps: 
+    
       # Forbid workflow execution on template repository
       - name: Check Repository
         run: |
@@ -17,6 +18,7 @@ jobs:
             echo -e "\e[91mError: This workflow cannot be run from the template repository.\e[0m"
             exit 1
           fi
+          
       # Verify for existing token secret set
       - name: Check for Token Secret
         run: |
@@ -31,6 +33,7 @@ jobs:
             echo -e "\e[93m6. Name the secret \e[94mPAT_TOKEN\e[93m and paste the copied token as the value"
             exit 1
           fi
+          
       # Verify for a valid year input            
       - name: Check Year Format
         run: |
