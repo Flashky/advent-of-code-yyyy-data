@@ -89,7 +89,7 @@ jobs:
 
       # Clean up folders and README if AoC event is 2025 or newer.
       - name: Clean Up (2025+)
-        if: ${{ github.event.inputs.aoc_year >= 2025 }}
+        if: ${{ env.AOC_YEAR >= 2025 }}
         run: |
           echo "Year $AOC_YEAR is 2025 or greater. Performing cleanup..."
           
