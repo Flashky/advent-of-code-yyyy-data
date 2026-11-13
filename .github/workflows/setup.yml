@@ -1,7 +1,8 @@
 name: Setup
 on:
   workflow_dispatch:
-
+concurrency:
+  group: setup-workflow
 env:
   AOC_YEAR: ${{ vars.AOC_YEAR }}
 
@@ -137,6 +138,7 @@ jobs:
           echo "Pull Request URL - ${{ steps.pull-request.outputs.pull-request-url }}"
 
       - name: Enable Pull Request Auto-Merge
+        if: ${{ steps.pull-request.outputs.pull-request-url != '' }}
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           PR_URL:  ${{ steps.pull-request.outputs.pull-request-url }}
